@@ -158,12 +158,12 @@ from decimal import Decimal, ROUND_UP
 import requests
 
 # Modify folder_paths module to use our temp directory
-if hasattr(folder_paths, "get_temp_directory"):
-    original_get_temp = folder_paths.get_temp_directory
-    folder_paths.get_temp_directory = lambda: MODULE_TEMP_DIR
-else:
-    # Add the function if it doesn't exist
-    setattr(folder_paths, 'get_temp_directory', lambda: MODULE_TEMP_DIR)
+# if hasattr(folder_paths, "get_temp_directory"):
+#     original_get_temp = folder_paths.get_temp_directory
+#     folder_paths.get_temp_directory = lambda: MODULE_TEMP_DIR
+# else:
+#     # Add the function if it doesn't exist
+#     setattr(folder_paths, 'get_temp_directory', lambda: MODULE_TEMP_DIR)
 
 def import_inference_script(script_path):
     """Import a Python file as a module using its file path."""
